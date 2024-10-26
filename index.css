@@ -37,6 +37,7 @@ nav {
   background-color: black;
   top: 0;
 }
+
 .row-display {
   display: flex;
   justify-content: space-between;
@@ -79,8 +80,8 @@ nav .logo {
   animation: slideNav 1s ease normal forwards;
   font-weight: bold;
 }
-nav button {
-  display: none;
+button {
+  text-decoration: none;
 }
 main {
   position: relative;
@@ -115,7 +116,7 @@ main {
   opacity: 0;
 }
 .details h4 {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
   animation: slideRight 2s ease 0.3s normal forwards;
   opacity: 0;
@@ -126,25 +127,25 @@ main {
   -webkit-background-clip: text;
 }
 .details p {
-  font-size: 16px;
+  font-size: 18px;
 
-  max-width: 300px;
+  max-width: 400px;
   animation: slideleft 2s ease 0.3s normal forwards;
 }
 .details #text {
-  font-size: 0.8rem;
+  font-size: 1.3rem;
   animation: slideNav 1s ease normal 0.1s forwards;
 }
 .details button {
-  width: 60px;
-  padding: 8px;
+  width: 100px;
+  padding: 10px;
   height: 20px;
   border: none;
   position: relative;
   background: linear-gradient(45deg, #f0cb35, #c02425, #f0cb35);
   border-radius: 5px;
   color: white;
-  font-size: 9px;
+  font-size: 14px;
   padding: 2px 0;
   cursor: pointer;
   overflow: hidden;
@@ -366,9 +367,9 @@ main {
 .education p {
   font-size: 11px;
 }
-
 .about-me p {
-  font-size: 13px;
+  padding: 5px 0;
+  font-size: 18px;
 }
 .about-me a {
   width: 100px;
@@ -492,7 +493,7 @@ main {
   justify-content: left;
   align-items: center;
   text-align: center;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
   flex-direction: column;
   width: 300px;
@@ -525,11 +526,12 @@ main {
 }
 .places li {
   font-weight: bold;
-  margin-top: 18px;
-  font-size: 18px;
+  margin: 20px;
+  font-size: 20px;
+  list-style: circle;
 }
 .places li p {
-  font-weight: 600;
+  margin: 10px;
   font-size: 16px;
   padding-bottom: 7px;
   color: aliceblue;
@@ -554,6 +556,7 @@ main {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    padding: 2rem 5px;
   }
   .logo {
     width: 100%;
@@ -588,11 +591,12 @@ main {
     width: 100%;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   nav {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    padding: 2rem 10px;
   }
 
   .about-section {
@@ -606,13 +610,14 @@ main {
   }
   .edu-exp {
     display: flex;
-
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    width: 100%;
+    flex-wrap: wrap;
   }
   .about-section {
-    padding-top: ;
+    padding-top: 10px;
   }
 
   .fa-bars {
