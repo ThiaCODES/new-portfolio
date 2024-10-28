@@ -657,7 +657,7 @@ footer {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    padding: 2rem 5px;
+    padding: 2rem 20px;
   }
   .logo {
     width: 100%;
