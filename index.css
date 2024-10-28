@@ -281,7 +281,7 @@ main {
     transform: translateY (0);
   }
   50% {
-    transform: translateY(-30px);
+    transform: translateY(-40px);
   }
   100% {
     transform: translateY(0);
