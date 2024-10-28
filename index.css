@@ -253,7 +253,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: dangling ease 3s infinite;
+  animation: slideleft 2s ease 0.3s normal forwards, dangling ease 3s infinite;
+  opacity: 0;
 }
 .image span {
   position: absolute;
