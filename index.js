@@ -15,3 +15,28 @@ links.forEach((link) => {
     });
   });
 });
+
+//scroll function
+let calcScroll = () => {
+  const scroll = document.querySelector(".scroll");
+  const scrollBtn = document.querySelector(".scroll p");
+  let value = document.documentElement.scrollTop;
+
+  const scrollDif =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  const scrollValue = Math.floor((value / scrollDif) * 100);
+  console.log(scrollValue);
+  if (value > 300) {
+    scroll.style.display = "flex";
+  } else {
+    scroll.style.display = "none";
+  }
+  scroll.addEventListener("click", () => {
+    document.documentElement.scrollTop = 0;
+  });
+  scroll.style.background = `conic-gradient( orange ${scrollValue}% ,white ${scrollValue}%  )`;
+};
+
+window.onscroll = calcScroll;
+window.onload = calcScroll;
