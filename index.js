@@ -1,20 +1,30 @@
 const menubtn = document.querySelector(".fa-bars");
 const navbar = document.querySelector("ul");
-const links = document.querySelectorAll(".link");
+const links = document.querySelectorAll(" .unordered a, .sidebar a");
+const sidenav = document.querySelector(".sidebar");
 
-menubtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  navbar.classList.toggle("column-display");
-});
-links.forEach((link) => {
-  link.addEventListener("click", () => {
-    navbar.classList.remove("column-display");
-    links.forEach((item) => {
-      item.classList.remove("active");
-      link.classList.add("active");
+const unorderedlist = document.querySelector(".list");
+
+function showList() {
+  unorderedlist.classList.toggle("list");
+  navbtn.classList.toggle("fa-xmark");
+}
+
+function showBar() {
+  sidenav.style.display = "flex";
+}
+links.forEach((item) => {
+  item.addEventListener("click", () => {
+    sidenav.style.display = "none";
+    links.forEach((link) => {
+      link.classList.remove("active");
+      item.classList.add("active");
     });
   });
 });
+function closeBar() {
+  sidenav.style.display = "none";
+}
 
 //scroll function
 let calcScroll = () => {
@@ -26,7 +36,7 @@ let calcScroll = () => {
     document.documentElement.scrollHeight -
     document.documentElement.clientHeight;
   const scrollValue = Math.floor((value / scrollDif) * 100);
-  console.log(scrollValue);
+
   if (value > 300) {
     scroll.style.display = "flex";
   } else {

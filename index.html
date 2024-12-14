@@ -18,20 +18,29 @@
   </head>
   <body>
     <section class="container">
-      <nav>
-        <a href="#" class="logo">ThiaCODES</a>
-        <i class="fa-solid fa-bars"></i>
-         <ul class="row-display">
-         
-          <li><a    href="#home" style="--i:1" class="link active">Home</a></li>
-          <li><a href="#about" style="--i:2;" class="link">About</a></li>
-          <li><a href="#skills"style="--i:3" class="link">Skills</a>
-          </li>
-          <li><a href="#project"style="--i:4;" class="link">Project</a></li>
-          <li><a href="#contact"style="--i:5;" class="link">Let's Talk</a></li>
-         
-        </ul>
-      </nav>
+      <header>
+        <h3 class="logo">ThiaCODES</h3>
+        <nav>
+  
+          <ul class="unordered ">
+            <li class="link"><a href="#home" class="active">Home</a></li>
+            <li class="link"><a href="#about">About</a></li>
+            <li class="link"><a href="#skills">Skills</a></li>
+            <li class="link"><a href="#project">Projects</a></li>
+            <li class="link"><a href="#contact"> Let's Talk</a></li>
+            <li > <i class="fa-solid fa-bars"onclick= showBar()></i></li>
+          </ul>
+          <ul class="list sidebar">
+            <li>  <i class="fa-solid fa-xmark"  onclick= closeBar()></i></li>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact"> Let's Talk</a></li>
+          </ul>
+        </nav>
+      </header>
+       
       <main class="hero" id="home">
         <!---->
          
@@ -46,9 +55,9 @@
     <p id="text">I bring ideas to life with clean, responsive web design. </p>
     
     <div class="contact">
-      <a href="https://www.facebook.com/fathia.rabiu.1"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="https://www.linkedin.com/in/fathiat-rabiu-113796255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"> <i class="fab fa-linkedin"></i></a>
-      <a href="https://x.com/ThiaCODES?t=BovQrtJBcUjavfOPmsWF0A&s=09">  <i class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://www.facebook.com/fathia.rabiu.1" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://www.linkedin.com/in/fathiat-rabiu-113796255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"> <i class="fab fa-linkedin"></i></a>
+      <a href="https://x.com/ThiaCODES?t=BovQrtJBcUjavfOPmsWF0A&s=09" target="_blank">  <i class="fa-brands fa-x-twitter"></i></a>
     </div>
     <a href="#contact">Let,s Talk</a>
     </div>
@@ -83,14 +92,14 @@
           </div>
           <p>Dynamic and proficient Front-End Developer with expertise in
             HTML, CSS, JavaScript, React and Bootstrap. I take pride in staying up to date with current web trends and leveraging my skills to build great website for my clients.</p>
-          <a href="https://drive.google.com/uc?export=download&id=1NoN0_MPvDxuVF8UAskRkLdB-Z6mW2f0Y" 
-          
+          <a href="https://drive.google.com/uc?export=download&id=1WM-OSRzPm_S84kJQ80MACcmNNZLT0fNR" 
+      
           download="fathiat-CV.pdf">Download CV</a>
         </div>
         
           <div class="image-section">
            
-            <div class="image-circle-glow"> <img src="./Assets/fat4.jpg" alt=""></div>
+            <div class="image-circle-glow"> <img src="./Assets/IMG-20241214-WA0005.jpg" alt=""></div>
                
           </div>
        </div>
@@ -99,14 +108,7 @@
        
      <section class="skill-section" id="skills">
       <h1>Skills</h1>
-      <div class="sub-skill-section">  <div class="skills">
-        <i class="fa-solid fa-user"></i>
-        <h3>Experience</h3>
-         <ul class="places">
-                    <li>April 2024- June 2024<p>Front-end Dev Trainee at DGI Africa</p></li>
-                    <li>July 2024- Present<p>Front-end at Idealnovate </p></li>
-                </ul>
-      </div>
+      
       <div class="languages">
         
        <div>
@@ -161,17 +163,10 @@
      <section id="project">
       <h2>My Projects</h2>
       <div class="my-projects">
-        <div class="box">
-          <img src="./Assets/127.0.0.1_5501_recipe_index.html(iPhone 12 Pro) (5).png" alt="recipe website">
-          <h2>Project One</h2>
-          <div class="box-one">
-            <a href="https://github.com/ThiaCODES/recipe-app.git">GitHub</a>
-           <a href="https://recipe-app-utk0.onrender.com">Live Demo</a>
-        </div>
-        </div>
+        
         <div class="box">
           <img src="./Assets/localhost_3000_(iPhone XR).png" alt="my first react app">
-          <h2>Project Two</h2>
+          <h2>Project one</h2>
           <div class="box-one">
             <a href="https://github.com/ThiaCODES/my-first-react-app.git">GitHub</a>
            <a href="https://my-first-react-app-yqtr.onrender.com">Live Demo</a>
@@ -179,28 +174,45 @@
         </div>
         <div class="box">
           <img src="./Assets/127.0.0.1_5500_index.html(Samsung Galaxy S8+).png" alt="password generator">
-          <h2>Project Three</h2>
+          <h2>Project Two</h2>
           <div class="box-one">
             <a href="https://github.com/ThiaCODES/password-generator.git">GitHub</a>
            <a href="https://password-generator-eefc.onrender.com">Live Demo</a>
         </div>
         </div>
         <div class="box">
-          <img src="./Assets/school-landing-page-7rl4.onrender.com_(iPhone SE).png" alt="school landing page">
-          <h2>Project Four</h2>
+          <img src="./Assets/127.0.0.1_5500_(iPhone 12 Pro).png" alt="library">
+          <h2>Project Three</h2>
           <div class="box-one">
-            <a href="https://github.com/ThiaCODES/School-landing-page.git">GitHub</a>
-           <a href="https://school-landing-page-7rl4.onrender.com">Live Demo</a>
+            <a href="https://github.com/ThiaCODES/book.git">GitHub</a>
+           <a href="https://booklibrary-ruddy.vercel.app/">Live Demo</a>
         </div>
         </div>
         <div class="box">
           <img src="./Assets/loan-app-pa69.onrender.com_(iPhone SE).png" alt="loan app">
-          <h2>Project Five</h2>
+          <h2>Project Four</h2>
           <div class="box-one">
             <a href="https://github.com/ThiaCODES/Loan-app.git">GitHub</a>
            <a href="https://loan-app-pa69.onrender.com">Live Demo</a>
         </div>
         </div>
+        <div class="box">
+          <img src="./Assets/127.0.0.1_5501_recipe_index.html(iPhone 12 Pro) (5).png" alt="recipe website">
+          <h2>Project Five</h2>
+          <div class="box-one">
+            <a href="https://github.com/ThiaCODES/recipe-app.git">GitHub</a>
+           <a href="https://recipe-app-utk0.onrender.com">Live Demo</a>
+        </div>
+        </div>
+        <div class="box">
+          <img src="./Assets/tastyfood-puce.vercel.app_(iPhone 12 Pro).png" alt="foodapp">
+          <h2>Project Six</h2>
+          <div class="box-one">
+            <a href="https://github.com/ThiaCODES/Tefem-Project2.git">GitHub</a>
+           <a href="https://tastyfood-puce.vercel.app/">Live Demo</a>
+        </div>
+        </div>
+        
      
     
     </section>
@@ -225,8 +237,6 @@
     <div class="scroll">
       <p>v</p>
     </div>
-      </section>
-   
     <script src="index.js"></script>
   </body>
 </html>

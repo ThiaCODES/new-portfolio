@@ -14,7 +14,7 @@ body {
   background-color: black;
   justify-content: center;
   color: white;
-  width: 100vw;
+  width: 100%;
   font-family: "Poppins", sans-serif;
   font-optical-sizing: auto;
   overflow-x: hidden;
@@ -26,38 +26,124 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   padding: 5rem auto;
   overflow-x: hidden;
 }
+
+header {
+  display: flex;
+  height: 3rem;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin: 0 auto;
+  z-index: 999;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  padding: 2rem;
+  background-color: black;
+  box-shadow: 0px 0px 10px 1px rgb(39, 62, 62);
+}
+.fa-bars {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.fa-xmark {
+  color: black;
+}
+header h3 {
+  font-weight: 450;
+  font-size: 1rem;
+  padding-top: 10px;
+}
+
 nav {
   display: flex;
   width: 100%;
-  margin: 0 auto;
-  height: 3rem;
-  padding: 2rem 5rem;
   justify-content: center;
-  position: fixed;
-  z-index: 10;
+  gap: 10px;
   align-items: center;
-  background-color: black;
+}
+.unordered {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+.sidebar {
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 60%;
+  height: 100vh;
+  position: fixed;
+  opacity: 0;
   top: 0;
+  right: 0;
+  z-index: 999;
+  background-color: white;
+  padding-top: 2rem;
+  box-shadow: 0px 0px 10px 0px gainsboro;
+  backdrop-filter: blur(10px);
+  animation: slide 0.5s ease-in-out 0.1s normal forwards;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.sidebar li {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  height: 100%;
 }
 
-.row-display {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+li {
+  list-style: none;
+  margin: 0 1rem;
 }
 button,
 a {
   cursor: pointer;
 }
-li {
-  list-style: none;
-  margin: 0 10px;
+.unordered a {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: "poppins", sans-serif;
+  font-weight: 500;
+  color: white;
 }
+
+.sidebar a {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: "poppins", sans-serif;
+  font-weight: 500;
+  color: black;
+}
+.linkbtn {
+  color: white;
+}
+.active {
+  color: rgb(54, 161, 54);
+}
+
 .link {
   color: white;
   text-decoration: none;
@@ -68,10 +154,9 @@ li {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
-.row-display li a {
+.sidebar li a {
   display: inline-block;
   font-size: 1.2rem;
-  animation: slideNav calc(var(--i) * 0.5s) 0.3s ease normal forwards;
 }
 @keyframes slideNav {
   0% {
@@ -83,7 +168,7 @@ li {
     opacity: 1;
   }
 }
-nav .logo {
+.logo {
   width: 100%;
   color: white;
   font-size: 1.3rem;
@@ -98,6 +183,7 @@ main {
   position: relative;
   display: flex;
   width: 100%;
+  padding-left: 1rem;
   flex-wrap: wrap;
   margin-top: 5rem;
   margin-bottom: 4rem;
@@ -331,7 +417,7 @@ main {
 
 .image-circle-glow img {
   position: absolute;
-  width: 500px;
+  width: 280px;
   height: 100%;
   object-fit: cover;
 }
@@ -531,17 +617,22 @@ main {
   margin: 10px;
 }
 .places {
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
 }
 .places li {
   font-weight: bold;
-  margin: 20px;
+
   font-size: 20px;
-  list-style: circle;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 .places li p {
-  margin: 10px;
   font-size: 16px;
+  text-align: left;
 
   padding-bottom: 7px;
   color: aliceblue;
@@ -623,6 +714,7 @@ main {
 form {
   display: flex;
   width: 100%;
+  padding: 0 1rem;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -706,8 +798,8 @@ footer {
     justify-content: space-between;
     padding: 2rem 20px;
   }
-  .logo {
-    width: 100%;
+  header {
+    gap: 5rem;
   }
   .image {
     width: 250px;
@@ -729,24 +821,11 @@ footer {
     display: block;
     color: aliceblue;
   }
-
-  .row-display {
-    display: none;
-    justify-content: space-between;
-  }
-
   .about-me {
     width: 100%;
   }
 }
 @media screen and (max-width: 800px) {
-  nav {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    padding: 2rem 10px;
-  }
-
   .about-section {
     height: 100%;
     width: 100%;
@@ -773,44 +852,6 @@ footer {
     color: aliceblue;
   }
 
-  .row-display {
-    display: none;
-    justify-content: space-between;
-  }
-
-  .column-display {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 40vh;
-    left: 0;
-    right: 0;
-    position: absolute;
-    top: 100%;
-    background-color: whitesmoke;
-  }
-  .column-display li {
-    border-bottom: 1px black solid;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100%;
-    margin: 0 10px;
-  }
-  .link {
-    color: black;
-    text-decoration: none;
-  }
-  li a {
-    display: inline-block;
-    font-size: 0.9rem;
-    animation: slideNav calc(var(--i) * 0.3s) 0.3s ease normal forwards;
-  }
-
   input {
     width: 100%;
     height: 50px;
@@ -833,13 +874,48 @@ footer {
     font-size: 20px;
     padding: 10px;
   }
-}
-
-@media screen and (max-width: 950px) {
-  nav {
+  header {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    padding: 2rem 10px;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  nav {
+    height: 100%;
+  }
+  .link {
+    display: none;
+  }
+  .fa-bars {
+    font-size: 1.7rem;
+    margin-left: 1rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  header h3 {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .fa-xmark {
+    font-size: 1.7rem;
+  }
+  li a {
+    font-size: 1.6rem;
+  }
+  li {
+    list-style: none;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
